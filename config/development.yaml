@@ -33,7 +33,7 @@ workers:
   #   - BackgroundAsync - Workers operate asynchronously in the background, processing tasks with async capabilities.
   mode: BackgroundAsync
 
-  
+
 
 # Mailer Configuration.
 mailer:
@@ -63,6 +63,8 @@ mailer:
 # Database Configuration
 database:
   # Database connection URI
+  # I have removed the trailing double quotation mark from the end of this value and placed in a comment.
+  # uri: {{ get_env(name="DATABASE_URL", default="sqlite://tera-wat-bug_development.sqlite?mode=rwc) }}
   uri: {{ get_env(name="DATABASE_URL", default="sqlite://tera-wat-bug_development.sqlite?mode=rwc") }}
   # When enabled, the sql query will be logged.
   enable_logging: false
